@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+  <html>
+
+  <head>
+    <title>
+      temperature
+    </title>
+
+  </head>
+
+  <body>
+  
+    <label for="celciusInput">Enter Ceclius </label> <input type="number" id="cecliusInput">
+    <button type="button" onclick="toFahrenheit()">Convert to Fahrenheit</button>
+
+    <br><br>
+    <label for="fahrenheitInput">Enter Fahrenheit </label> <input type="number" id="fahrenheitInput">
+    <button type="button" onclick="toCeclius()">Convert to Ceclius</button>
+
+    <div id="result1"> .. </div>
+    <br>
+    <p id="result2"> .. </p>
+
+    
+  </body>
+
+  <script>
+
+    function toFahrenheit() {
+      var cecliusInput = document.getElementById('cecliusInput');
+      var result1 = document.getElementById('result1');
+
+      result1.innerHTML = 
+      '<p>' + cecliusInput.value + '&degC  is ' + 
+        (Number(cecliusInput.value) * (9/5) + 32) + ' &degF'
+      '</p' ;
+    }
+    
+    function toCeclius() {
+      var fahrenheitInput = document.getElementById('fahrenheitInput');
+      var result2 = document.getElementById('result2');
+
+      result2.innerHTML = 
+      '<p>' + fahrenheitInput.value + '&degF  is ' +
+        ((Number(fahrenheitInput.value) - 32) * (5 / 9)) + ' &degC'
+      '</p';
+    }
+  </script>
+
+</html>

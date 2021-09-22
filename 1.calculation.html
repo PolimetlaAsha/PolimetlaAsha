@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      calculation
+    </title>
+    
+  </head>
+  <body>
+    <label for="1st">1st number  : </label> <input type="number" name="1st" id="1st">
+    <br> <br>
+    <label for="2nd">2nd number : </label> <input type="number" name="2nd" id="2nd">
+    <br> 
+    <br> 
+    <button type="button" onclick="multiply()" >
+      multiply 
+    </button>
+
+    <button type="button" onclick="divide()">
+      divide
+    </button>
+    <p>The result is: </p>
+    <p id="result">result </p>
+
+    <script>
+      var first = document.getElementById("1st");
+      var second = document.getElementById("2nd");
+
+      var result = document.getElementById("result");
+      function multiply() {
+        result.innerHTML = '<p>' + (first.value * second.value) + '</p>';
+      }
+
+      function divide() {
+        console.log(second);
+        if(Number(second.value) == 0) {
+          result.innerHTML = '<p>' + 'denominator should not be zero (0)' + '</p>';
+          return;
+        }
+        result.innerHTML = '<p>' + (first.value / second.value) + '</p>';
+      }
+    </script>
+  </body>
+</html>

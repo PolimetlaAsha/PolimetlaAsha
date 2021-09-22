@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+         $('p').each(function() {
+         var html = $(this).html();
+         var word = html.substr(0, html.indexOf(" "));           
+         var rest = html.substr(html.indexOf(" "));
+         $(this).html(rest).prepend($("<span/>").html("<b>"+word+"</b>") );
+  });
+});
+</script>
+</head>
+<body>
+<p>First Task</p>
+<p>Second Task</p>
+<p>Third Task</p>
+<p>Jquery Task</p>
+
+
+</body>
+</html>
